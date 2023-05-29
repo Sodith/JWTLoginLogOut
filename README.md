@@ -1,1 +1,39 @@
-# LoginLogOutGreen
+# LoginWithJWTtoken
+These are instruction to run this program ...
+TO REGISTER
+1) Open Postman and create a new POST request.
+2) Set the URL to http://localhost:9000/register.
+3) In the request body, add the following JSON data:
+
+
+{
+    "userid": "your_user_id",
+    "username": "your_username",
+    "password": "your_password",
+    "address": "your_address"
+}
+TO LOGIN
+1) Click the Send button to register the user.
+2) After the user is registered, create a new POST request in Postman.
+3) Set the URL to http://localhost:9000/login.
+4) In the request body, add the following JSON data:
+
+
+
+{
+    "username": "your_username",
+    "password": "your_password"
+}
+To getallusers
+1) Click the Send button to log in and retrieve the access token.
+2) Once you have the access token, create a new GET request in Postman.
+3) Set the URL to http://localhost:9000/api/v1/userservice/users.
+4) In the Authorization tab, select "Bearer Token" and paste the access token you received earlier.
+5) Click the Send button to retrieve all the users.
+Note: Please make sure to replace "your_user_id", "your_username", "your_password", and
+"your_address" with your actual user data.
+
+Open H2 Database Url
+url=http://localhost:9000/h2-console
+paste in Jdbc url = jdbc:h2:mem:testdb
+type command select*from users
